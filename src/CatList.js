@@ -1,11 +1,9 @@
 import { useState } from "react";
+import CatInfo from "./CatInfo";
 import './CatList.css';
 const CatList = ({catsData}) => {
 
-    const goBack =()=>{
-        setListDisplayed(true);
-        setSelected(false);
-    }
+    
     const [isSelected, setSelected] =useState(false);
     const [listDisplayed, setListDisplayed] =useState(true);
     const [cat, setCat] =useState([]);
@@ -32,6 +30,7 @@ const CatList = ({catsData}) => {
         }); 
     };
     return ( 
+        <div>
         <div className="listContainer">
             {listDisplayed && catsData.map((catObj)=>{ 
                 let temperamentList = catObj.temperament.split(',');
@@ -49,26 +48,8 @@ const CatList = ({catsData}) => {
                 </div> 
             })
             }
-            {isSelected && cat.map((catObj)=>{
-                console.log(catObj);
-                return (
-                <div key={catObj.breeds.[0].id}>
-                    <button onClick={()=> goBack()}>Back button</button>
-                    
-                    <div  className="catInfoWrapper">
-                    <div >
-                        <img  src={catObj.url} width="300" heigth="200"/>
-                        <h2>{catObj.breeds.[0].name}</h2>
-                        <p><strong>Life Span:</strong>{catObj.breeds.[0].life_span} years</p>
-                        <p><strong>Origin: </strong>{catObj.breeds.[0].origin} </p>
-                        <p><strong>Weight: </strong>{catObj.breeds.[0].weight.metric} Kg</p>
-                        <p><strong>Learn more: </strong><a href={catObj.breeds.[0].wikipedia_url}>Wikipedia</a> </p>
-                    </div>
-                    </div> 
-                </div>
-
-                ); 
-            })
+        </div>
+            {isSelected && <CatInfo cat={cat} updateCat={(newCat)=>setCat(newCat)} displayAll ={booleanStatus=>{setListDisplayed(booleanStatus); setSelected(!booleanStatus)}}></CatInfo>
             }
          </div> 
         );

@@ -1,0 +1,31 @@
+
+.imgCar img{
+    display: block;
+    /* display: flex;
+    flex-direction:  column; */
+    /* height: 250px; */
+    border: 4px lightgray inset;
+}
+a{
+    color: white;
+}
+.imgCar{
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   gap: 10px;
+}
+.nextBtn{
+    width: 50%;
+    text-align: center;
+    cursor:pointer;
+}
+.catInfoHeading{
+    text-align: center;
+}
+.infoColumns{
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}

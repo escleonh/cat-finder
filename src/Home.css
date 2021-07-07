@@ -1,0 +1,32 @@
+.pawsImg{
+    background: url("images/paws.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    /* border: 1px solid red; */
+    /* margin: 0 auto; */
+    height: 60vh;
+    width: 35vw;
+
+  
+  }
+  .homeContent{
+      display: flex;
+      /* flex-direction: row; */
+      justify-content: center;
+      align-items: center;
+      gap: 5vw;
+  height: 60vh;
+  width: 100vw;
+
+  }
+  a{
+      text-decoration: none;
+
+  }
+  .viewCatsBtn{
+      background-color: #0d0736;
+      border-radius: 5px;
+      padding: 8px 10px;
+      color: white;
+
+  }
