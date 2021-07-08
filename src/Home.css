@@ -1,23 +1,27 @@
-.pawsImg{
-    background: url("images/paws.png");
+.pawsImg img{
+    /* background: url("images/paws.png");
     background-position: center;
-    background-repeat: no-repeat;
+    background-repeat: no-repeat; */
     /* border: 1px solid red; */
     /* margin: 0 auto; */
-    height: 60vh;
-    width: 35vw;
+    /* height: 60vh;
+    width: 35vw; */
+/* 
+    width: 100%;
+    height: 100%; */
 
   
   }
   .homeContent{
-      display: flex;
-      /* flex-direction: row; */
-      justify-content: center;
-      align-items: center;
-      gap: 5vw;
-  height: 60vh;
-  width: 100vw;
-
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 5vw;
+    height: 60vh;
+    width: 100vw;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
   }
   a{
       text-decoration: none;
@@ -29,4 +33,26 @@
       padding: 8px 10px;
       color: white;
 
+  }
+
+  @media only screen and (max-width: 1000px) {
+    .homeContent{
+        /* border:1px solid red; */
+        display: flex;
+        flex-direction: column-reverse;
+        
+        flex-wrap: nowrap;
+        height: 70vh;
+
+        }
+        
+   
+  }
+  @media only screen and (max-width: 600px) {
+    .pawsImg img{
+        width: 90%;
+    }
+    .tagline{
+        width: 90vw;
+    }
   }

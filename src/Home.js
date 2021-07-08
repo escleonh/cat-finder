@@ -1,4 +1,5 @@
 import './Home.css';
+import pawsImg from './images/paws.png';
 const Home = () => {
     return ( 
         <div  className="homeContent">
@@ -10,6 +11,7 @@ const Home = () => {
            </div>
 
            <div className="pawsImg"> 
+           <img src={pawsImg} alt=""/>
            </div>
         </div>
      );
