@@ -4,12 +4,21 @@
     /* display: flex;
     flex-direction:  column; */
     /* height: 250px; */
-    border: 4px lightgray inset;
+    border: 4px lightgray solid;
+}
+.catImage{
+    width: 25vw;
+    height: 40vh;
+    /* Set as important to be able to applied since background url 
+    ws set using javascript */
+    background-position: center!important;
+    background-size: cover!important;
+    background-repeat: no-repeat!important;
 }
 a{
-    color: white;
+    /* color: white; */
 }
-.imgCar{
+.catImgWrapper{
    display: flex;
    flex-direction: column;
    justify-content: center;
@@ -17,15 +26,29 @@ a{
    gap: 10px;
 }
 .nextBtn{
-    width: 50%;
     text-align: center;
     cursor:pointer;
+    background-color: #00002b;
+    color: white;
+    border-radius: 6px;
+    padding: 4px;
 }
 .catInfoHeading{
     text-align: center;
+    margin: 10px 0;
 }
 .infoColumns{
     display: flex;
     justify-content: center;
     gap: 15px;
+    padding: 0 10px;
+
+}
+.catInfoBox{
+ width: 25vw;
+ background-color:rgb(247, 247, 247);
+ margin: 0 auto;
+ border-radius: 5px;
+ border: 4px rgb(245, 245, 245) solid;
+
 }

@@ -5,11 +5,12 @@ const CatInfo = ({cat, displayAll,updateCat}) => {
     // const goBack =()=>{
     //     displayAll(true);
     // }
-   
+    const {CAT_API_KEY} = process.env;
+
     const nextPic = (cat)=>{
-        console.log(cat.breeds);
+        // console.log(cat.breeds);
         fetch('https://api.thecatapi.com/v1/images/search?breed_id='+ cat.breeds.[0].id,{
-            headers: {'x-api-key': ''}
+            headers: {'x-api-key': CAT_API_KEY}
         })
         .then(res => {
             if(res.status!==200){
@@ -17,9 +18,11 @@ const CatInfo = ({cat, displayAll,updateCat}) => {
               return;
             }
             res.json().then((data)=>{
-                // console.log(data);
+                
             // setSelected(true);
             updateCat(data);
+            document.querySelector('.catImage').style.background = "url("+data[0].url +")";
+                
             // setListDisplayed(false);
 
             });  
@@ -34,11 +37,11 @@ const CatInfo = ({cat, displayAll,updateCat}) => {
         return (
         <div key={catObj.breeds.[0].id}>
             {/* <a href="/cats">Go Back</a> */}
-            <div  className="catInfoWrapper">
-            <div >
-            <div className="imgCar">
-
-            <img  src={catObj.url} width="300" height="280" className="catImg" />
+            <div  className="catInfoContainer">
+            <div className="catInfoBox">
+            <div className="catImgWrapper">
+            <div className="catImage"></div>
+            {/* <img  src={catObj.url} width="300" height="280" className="catImg" /> */}
             <button onClick={()=>nextPic(catObj)} className="nextBtn" >Next Picture</button>
           
 

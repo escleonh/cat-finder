@@ -3,6 +3,7 @@ import CatList from "./CatList";
 
 const Cats = () => {
 
+    const {CAT_API_KEY} = process.env;
     let [isLoading,setsLoading] = useState(true);
     let [isLoaded,setisLoaded] = useState(false);
 
@@ -10,7 +11,7 @@ const Cats = () => {
 
     useEffect(()=>{
         fetch('https://api.thecatapi.com/v1/breeds',{
-            headers: {'x-api-key': ''}
+            headers: {'x-api-key': CAT_API_KEY}
         })
         .then(res => {
             if(res.status!==200){

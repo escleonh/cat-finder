@@ -1,5 +1,4 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
 .nav-menu li{
     list-style-type: none;
     /* display: block; */
@@ -8,6 +7,7 @@
     text-decoration: none;
     color: #eeeeee;
     font-family: 'Roboto', sans-serif;
+    font-weight: 500;
     font-size: 1.2rem;
 }
 .nav-menu {

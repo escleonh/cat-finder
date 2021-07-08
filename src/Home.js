@@ -5,7 +5,7 @@ const Home = () => {
 
            <div className="tagline">
             <h1>Looking for a new Family Member?</h1>
-            <h2>We can help you!  </h2>
+            <h2>We can help you find the perfect match!  </h2>
             <a href="/cats" className="viewCatsBtn">View Cats</a>
            </div>
 

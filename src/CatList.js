@@ -3,6 +3,7 @@ import CatInfo from "./CatInfo";
 import './CatList.css';
 const CatList = ({catsData}) => {
 
+    const {CAT_API_KEY} = process.env;
     
     const [isSelected, setSelected] =useState(false);
     const [listDisplayed, setListDisplayed] =useState(true);
@@ -10,7 +11,7 @@ const CatList = ({catsData}) => {
 
     const learnMoreHandler = (catObj)=>{
         fetch('https://api.thecatapi.com/v1/images/search?breed_id='+ catObj.catObj.id,{
-            headers: {'x-api-key': ''}
+            headers: {'x-api-key': CAT_API_KEY}
         })
         .then(res => {
             if(res.status!==200){
@@ -18,10 +19,13 @@ const CatList = ({catsData}) => {
               return;
             }
             res.json().then((data)=>{
-                // console.log(data);
+                console.log(data);
+                console.log("h");
+                
             setSelected(true);
             setCat(data);
             setListDisplayed(false);
+            document.querySelector('.catImage').style.background = "url("+data[0].url +")";
 
             });  
         })
@@ -34,7 +38,7 @@ const CatList = ({catsData}) => {
         <div className="listContainer">
             {listDisplayed && catsData.map((catObj)=>{ 
                 let temperamentList = catObj.temperament.split(',');
-                console.log(temperamentList);
+                {/* console.log(temperamentList); */}
                 return <div  className="catBox" key={catObj.id}>
                 <p> <strong>{catObj.name}</strong></p>
                 <p>{catObj.temperament}</p>
