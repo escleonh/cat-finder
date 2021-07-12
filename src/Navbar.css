@@ -3,6 +3,7 @@ nav{
     font-family: 'Roboto', sans-serif;
     font-weight: 500;
 }
+
 .nav-menu li{
     list-style-type: none;
     /* display: block; */
@@ -19,6 +20,7 @@ nav{
     align-items: center;
     gap: 40px;
     margin-bottom: 0;
+    padding-left: 0;
 }
 nav{
     border-bottom: 1px solid #1303343e;
@@ -58,16 +60,22 @@ nav{
         transform: translateX(0)!important;
         transition: 1s ease-in-out;
     }
+    body.menu-open{
+        overflow:hidden;
+    }
     .slidebar{
+
         display: block;
         position: absolute;
-        right: -7px;
-        width: 40vw;
+        /* right: -7px; */
+        width: 100vw;
+        height: 100%;
+        overflow: hidden!important;
         border-radius: 0px 0px 0px 4px;
         text-align: center;
         
         /* border: 1px solid lightgray; */
-        background-color: rgb(247, 186, 112);
+        background-color: rgb(232, 166, 66,1);
         transform: translateX(100%);
         /* display: none; */
     }
@@ -87,6 +95,9 @@ nav{
     }
     .slidebar-menu{
         padding-left: 0px;
+        font-size: 1.2rem;
+       /* margin-top: 10vh; */
+        
     }
     .slidebar-menu li{
         list-style-type: none;

@@ -5,6 +5,7 @@ const Navbar = () => {
         console.log("CLIKE");
         const slidebar = document.querySelector('.slidebar');
         slidebar.classList.toggle('slidebarShow');
+        document.getElementsByTagName('body')[0].classList.toggle('menu-open');
         // slidebar.style.transform = "translateX(-100%)";
     };
 
