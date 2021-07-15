@@ -52,5 +52,11 @@
 }
 
 @media only screen and (max-width:600px){
-
+    .listContainer{
+    width: 90vw;
+    }
+    .catBox{
+        min-width: 140px;
+        max-width: 140px;
+    }
 }

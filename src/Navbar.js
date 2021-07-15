@@ -14,7 +14,7 @@ const Navbar = () => {
         <ul className="nav-menu">
             <li> <img src='/catLogo.png' /></li>
             <li><a href="/">HOME</a></li>
-            <li><a href="/cats">CATS</a></li>
+            <li><a href="/cats">CATSS</a></li>
         </ul>
         <div className="menu-Burger" onClick={()=>handleSlidebar()}>
             <div></div>
