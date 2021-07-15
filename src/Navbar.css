@@ -64,11 +64,13 @@ nav{
     }
     body.menu-open{
         overflow:hidden;
+
+        position:relative; 
     }
     .slidebar{
 
         display: block;
-        position: absolute;
+        position: fixed;
         left: 0;
         /* right: -7px; */
         width: 100vw;
