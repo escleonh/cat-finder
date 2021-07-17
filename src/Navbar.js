@@ -12,7 +12,7 @@ const Navbar = () => {
     return ( <nav className="Navbar">
        
         <ul className="nav-menu">
-            <li> <img src='/catLogo.png' /></li>
+            <li><a href="/"><img src='/catLogo.png' /></a></li>
             <li><a href="/">HOME</a></li>
             <li><a href="/cats">CATSS</a></li>
         </ul>
